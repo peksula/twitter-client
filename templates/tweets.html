@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Your tweets {% endblock %}</h1>
+
+    {% for tweet in twitter.show_tweets() %}
+    {{tweet|safe}}
+    {% endfor %}
+{% endblock %}
